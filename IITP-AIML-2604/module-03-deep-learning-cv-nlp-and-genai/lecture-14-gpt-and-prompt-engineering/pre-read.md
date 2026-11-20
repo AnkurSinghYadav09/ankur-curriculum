@@ -1,0 +1,37 @@
+# Pre-Read: GPT & Prompt Engineering
+
+**Batch:** IITP-AIML-2604
+**Module:** 03 — deep-learning-cv-nlp-and-genai
+**Week:** 26 | **Session:** 26.2
+**Taken by:** Industry Mentor
+
+---
+
+## Why this matters
+_One or two lines on where this session fits in the batch journey._
+
+## Topics covered
+- GPT: autoregressive decoder, causal masking
+- Temperature, top-k, top-p sampling
+- Zero-shot, few-shot, chain-of-thought prompting
+- Structured output: JSON mode and format constraints
+- System prompts and role prompting
+
+## Learning objectives
+By the end of this session, learners can:
+- _TBD_
+
+## Prerequisites
+- _Prior session / concept needed before class._
+
+## Key terms
+| Term | Meaning |
+|------|---------|
+| _term_ | _definition_ |
+
+## Come to class ready to answer
+- _Warm-up question 1_
+- _Warm-up question 2_
+
+## Optional deeper dives
+- _Resource link_
