@@ -1,0 +1,415 @@
+Module,Week,Session,Title,Topics Covered,LO_ID,LO_statement,Mentor
+Module 1: Foundations of Data,1,1.1,Getting Started with AI Landscape,"Course starting point: where AI, ML and GenAI fit, then a working place to write code; AI vs ML vs GenAI landscape; command line (CLI) basics: cd, ls, paths; environments: a virtual environment and pip installs from the terminal; VS Code with the project's Python interpreter; Google Colab and Jupyter notebooks with a one-line print demo; notebooks discipline: code vs markdown cells, restart-and-run-all before sharing; secrets are handled in the pre-recorded Git & GitHub pre-work","MLFOUND-001
+CLI-002
+CLI-018
+CLI-029
+CLI-037","Compare AI, machine learning and generative AI by what each term covers
+Apply cd and ls to reach a target directory and list its contents
+Configure a virtual environment for a project and activate it
+Configure VS Code to run a project file with the project's interpreter selected
+Write and run code in a notebook cell, separating code cells from markdown cells",Industry Mentor
+Module 1: Foundations of Data,1,1.2,Python Data Types & Decisions,"Builds on 1.1: first Python code written in the course notebook, working on a single food-delivery order; variables and data types (int, float, str, bool); converting between types; arithmetic, comparison and logical operators; if/elif/else decisions (Python flow, part 1)","PY-001
+PY-002
+PY-003
+PY-007
+PY-011
+PY-012","Write a script that stores values in named variables following Python naming conventions
+Classify a value as int, float, str or bool
+Convert a value between string, integer and float types
+Construct a boolean expression using comparison and logical operators
+Implement branching logic for a stated business rule using if/elif/else
+Predict which branch of a conditional executes for a given input",Industry Mentor
+Module 1: Foundations of Data,2,2.1,Python Loops & Data Structures,"Builds on 1.2: one order becomes a whole day's list of orders; lists and indexing; dictionaries as order records; tuples and sets; for loops and while loops (Python flow, part 2); looping over a list of order dictionaries","PYDS-001
+PYDS-002
+PYDS-021
+PY-013
+PY-014
+PYDS-042","State the ordering, mutability and duplicate rules of lists, tuples, sets and dictionaries
+Write a list and access its elements using positive and negative indexing
+Build a dictionary of key-value pairs, retrieving a value by its key
+Write a for loop that iterates over a sequence
+Write a while loop that terminates on a stated condition
+Extract a single field from each record in a list of dictionaries",Industry Mentor
+Module 1: Foundations of Data,2,2.2,Python Functions & Reusable Code,"Builds on 2.1: the same order-processing loops keep repeating, so wrap them once and call them by name; defining functions with parameters and return values; calling a function with positional and keyword arguments; default parameter values; variable scope, and why a name inside a function is invisible outside it; refactoring a repeated block of order-processing code into a reusable function; string methods to normalise casing and whitespace before that data is cleaned in 5.2","PY-019
+PY-022
+PY-029
+PY-020
+PY-021
+PY-009","Write a function that takes arguments and returns a computed value
+Explain why a variable defined inside a function is not visible outside it
+Refactor a repeated block of code into a reusable function
+Call a function using positional and keyword arguments
+Write a function with default parameter values
+Apply string methods to normalise casing and whitespace in a text value",Industry Mentor
+Module 1: Foundations of Data,3,3.1,"Python Files, JSON & Error Handling","Builds on 2.2: the functions from 2.2 need real data, and the orders really live in CSV and JSON files on disk; reading files with a with-block and why the file closes itself; CSV files with DictReader, keyed by column name; reading JSON files into dictionaries and lists; try/except so one bad row or a missing file does not crash the script","PYFILE-002
+PYFILE-013
+PYFILE-016
+PYFILE-007
+PYFILE-019","Write a script that reads a text file into a string using a with-block
+Parse a CSV into dictionaries keyed by column name using DictReader
+Parse a JSON file from disk into Python dictionaries and lists
+Catch FileNotFoundError and return a stated fallback instead of crashing
+Catch a JSON decoding error raised by a malformed file",Industry Mentor
+Others,,,[Pre-recorded] Version Control with Git & GitHub,"Pre-recorded pre-work, watched after Session 1.1 which sets up the terminal and the virtual environment; not a live lecture. Saving, versioning and sharing the course notebook; git init and commit identity from the terminal; staging with git add; commits with clear messages; environments & secrets: why API keys never go in code, and a .gitignore that keeps secrets and the virtual environment out of the repo; pushing the course repo to GitHub","CLI-026
+GIT-002
+GIT-005
+GIT-006
+GIT-014
+GIT-024","Explain why an API key must never be hard-coded in a script or notebook
+Configure a local repository with git init and the identity used for commit authorship
+Apply git add to stage only the files that belong in the next commit
+Write a commit message that states what changed and why
+Configure a .gitignore that excludes secrets, environments and generated files
+Configure a remote and push a local branch to GitHub for the first time",Industry Mentor
+Module 1: Foundations of Data,3,3.2,SQL: Querying & Aggregating,"Builds on 3.1: reading the orders file row by row answers one question slowly, so load the same orders and restaurants data into a SQLite database and ask the database instead; SQL lite: tables, rows and schema; what a relational database stores and how a schema defines it; SELECT with named columns; WHERE with comparison operators; ORDER BY with ASC/DESC and a tie-break column; GROUP BY with COUNT/SUM/AVG; joins follow in 4.1","DBMS-001
+SQL-001
+SQL-005
+SQL-010
+SQL-018","Describe how a relational database stores data as tables, rows and a defined schema
+Write a SELECT query returning named columns from a single table
+Filter rows using comparison operators in a WHERE clause
+Write a query that sorts results on multiple columns with mixed ASC and DESC
+Aggregate rows per category using GROUP BY",Industry Mentor
+Module 1: Foundations of Data,3,3.3,"Master class: Numbers, Logic & Structure - The Mathematical Language of Data","Number Systems & Boolean Logic : How computers represent truth. Binary numbers, logical operators (AND, OR, NOT), truth tables, De Morgan's laws. Why this underlies every conditional and every data type.
+
+Set Theory & Mathematical Structures : What is a set, subset, union, intersection, complement. How lists, dictionaries, and JSON are just applied set-theoretic structures. Venn diagrams. Mapping and functions in the mathematical sense (domain, codomain, range).","PY-033
+PY-034
+PYDS-032
+PYDS-048","Explain how binary digits represent whole numbers and the true or false outcome of a condition
+Construct a truth table for a compound logical expression using AND, OR and NOT
+Apply union, intersection and difference to compare two sets
+Classify a mapping as a function or not, stating its domain and codomain",Professor
+Module 1: Foundations of Data,4,4.1,SQL Joins in Depth,"Builds on 3.2: every 3.2 query read one table, but restaurant details sit in a second one, so the tables must be matched on a key; INNER JOIN of orders with restaurants; LEFT, RIGHT and FULL OUTER joins compared by which unmatched rows survive each; choosing the join type a reporting question actually needs; finding orders with no matching restaurant; what happens to the row count when the join key repeats on one side, and the inflated totals that follow","SQL-023
+SQL-024
+SQL-031
+SQL-025
+SQL-026","Join two tables on a matching key using INNER JOIN
+Compare INNER, LEFT, RIGHT and FULL OUTER joins by which unmatched rows survive
+Select the join type for a stated reporting requirement, justifying by which rows must survive
+Retrieve rows present in one table but absent from another using LEFT JOIN
+Predict the row count of a join when the key repeats on one side",Industry Mentor
+Module 1: Foundations of Data,4,4.2,SQL in Practice & Spreadsheets,"Builds on 4.1: the join types are known, so now write the query a business actually asks for; one question answered by a single statement that joins, filters and aggregates at once, pulling 3.2's WHERE and GROUP BY together with 4.1's join; joining a third table through a shared key; the classic trap of a LEFT JOIN silently reduced to an inner join by a WHERE filter; then the same filter-and-summarise questions answered where business teams already work, at intro level only: filtering and sorting a table without breaking row alignment, and a pivot table aggregating a measure by category, the spreadsheet echo of 3.2's GROUP BY","SQL-033
+SQL-029
+SQL-032
+SHEET-018
+SHEET-027","Write a single query combining a join, a filter and an aggregate to answer a business question
+Write a query joining three tables through a shared key
+Debug a LEFT JOIN silently reduced to an inner join by a WHERE filter
+Filter and sort a table on multiple criteria without breaking row alignment
+Build a pivot table that aggregates a measure by one or more categories",Industry Mentor
+Module 1: Foundations of Data,5,5.1,NumPy Arrays & pandas DataFrames,"Builds on 4.2: SQL answered these questions inside the database, but the data has to come back into Python to be modelled later, and looping over thousands of order rows is slow and clumsy; NumPy arrays; vectorised operations vs loops; pandas Series vs DataFrame; loading the orders CSV with read_csv; inspecting head, shape and dtypes; indexing with loc and iloc; filtering rows with a boolean mask, the pandas answer to 3.2's WHERE","NP-001
+NP-005
+PD-001
+PD-011
+PD-012
+PD-008","Construct a NumPy array from a Python list or nested list
+Explain why a vectorised array expression runs faster than an equivalent element loop
+Parse a CSV file into a DataFrame using read_csv with a stated separator and index column
+Retrieve rows and columns by label using .loc
+Retrieve rows and columns by position using .iloc
+Filter rows of a DataFrame using a boolean mask on one column",Industry Mentor
+Module 1: Foundations of Data,5,5.2,pandas Cleaning & Missing Values,"Builds on 5.1: the loaded orders table has gaps, and a model trained on gaps learns the gaps; finding missing values, including the ones disguised as sentinels like 999, 'NA' or an empty cell, and seeing how much of each column is absent; dropping rows or columns, and reporting the row loss that choice costs; filling instead of dropping, with the mean or the median, why a skewed column prefers the median, and how filling with the mean quietly narrows the spread of the data","ETL-005
+ETL-007
+ETL-008
+ETL-014
+ETL-015","Identify missing values disguised as sentinels such as 999, 'NA', 'unknown' or an empty string
+Remove rows or columns with missing values, reporting the row loss caused
+Impute missing numeric values using the column mean or median
+Select between mean and median imputation, justifying by the column's skew and extreme values
+Diagnose the distribution distortion introduced by mean imputation",Industry Mentor
+Module 1: Foundations of Data,6,6.1,"pandas Merging, Grouping & SQL","Builds on 5.2: the orders table is clean, but restaurant details still sit in a separate file and the questions are the ones 3.2 and 4.1 answered in SQL; joins/merge of orders with restaurants on a key; inner vs left joins in pandas; groupby aggregation; groupby.agg with several functions; closing the loop on SQL <-> pandas: WHERE is a boolean mask, GROUP BY is groupby, JOIN is merge, so a query from 3.2, 4.1 or 4.2 can be rewritten either way","PD-036
+PD-037
+PD-028
+PD-029
+PD-047","Join two DataFrames on a shared key using merge
+Compare inner, left, right and outer joins by which rows survive each
+Aggregate one column by a grouping key using groupby
+Aggregate several columns with different functions using groupby.agg
+Convert a SQL query that filters, groups or joins into equivalent pandas code",Industry Mentor
+Module 1: Foundations of Data,6,6.2,Data Visualisation & Chart Storytelling,"Builds on 6.1: the cleaned, grouped tables from pandas, SQL and pivots don't persuade on their own, so turn them into charts; plotting with matplotlib: bar charts and histograms; titles, axis labels and legends; seaborn for statistical charts straight from a tidy DataFrame, mapping columns to x, y and hue; choosing the right chart for the question; storytelling with takeaway titles","VIZ-002
+VIZ-004
+VIZ-013
+VIZ-011
+VIZ-023
+STORY-001","Build a bar chart comparing a metric across categories
+Build a histogram of a continuous variable, choosing a bin width
+Format a chart with a title, axis labels, units and a legend
+Build a Seaborn plot from a long-format DataFrame, mapping columns to x, y and hue
+Select a chart type for a stated question, justifying by the comparison asked for and each variable's measurement type
+Write a chart title that states the takeaway rather than the chart's subject",Industry Mentor
+Module 1: Foundations of Data,6,6.3,Masterclass: From Tables to Relationships - The Mathematics of Data Organisation,"Coordinate Geometry & Visualisation Intuition :  The Cartesian plane. What it means to ""plot"" data. Why a scatter plot is just mapping two variables to (x, y) coordinates. Slope of a line  rise over run,  as the seed of everything in ML.
+
+Basic Descriptive Statistics : Mean, median, mode, range, variance, standard deviation. What each tells you and what it hides. Why the mean lies when data is skewed. Real examples from datasets.","STAT-002
+STAT-003
+STAT-004
+STAT-005","Compute the mean, median and mode of a numeric dataset
+Select between the mean and the median as the centre measure, justifying by skew and outliers
+Compute the range, variance and standard deviation of a dataset
+Interpret a standard deviation in the units and context of the variable",Professor
+Module 1: Foundations of Data,7,7.1,EDA Checklist in Practice,"Builds on 6.2: charts made one at a time miss things, so apply a repeatable EDA checklist to the orders data; what one row represents (grain); profiling every column: type, range, missing values; distributions; outliers with the IQR rule (quartiles and the 1.5 x IQR fences); correlations with a target (reading -1 to 1); writing a reusable EDA checklist","EDA-001
+EDA-004
+EDA-008
+ETL-020
+EDA-012
+EDA-027","Describe the grain of a dataset, stating what a single row represents
+Profile a tabular dataset reporting per-column type, range, cardinality and summary statistics
+Interpret a histogram to describe a variable's distribution shape and modality
+Compute outlier boundaries for a numeric column using the interquartile-range rule
+Interpret a correlation matrix to shortlist candidate drivers of a target variable
+Design a reusable exploratory checklist for a new tabular dataset",Industry Mentor
+Module 1: Foundations of Data,7,7.2,"APIs, JSON & Data Ethics","Builds on 7.1: so far the data came from static files, but fresh data (ratings, weather) comes from APIs, and APIs come with rules; how a web API call works; GET requests with the requests library, and POST with a JSON body (used again in 15.1); query parameters; status codes; turning nested JSON into rows; basic ethics/ToS: terms of service, usage limits, using data only for its stated purpose","API-005
+API-006
+API-010
+API-017
+ETHICS-038
+ETHICS-018","Call a public REST endpoint from Python and inspect the response
+Construct a request with query parameters that filter the data returned
+Interpret an HTTP status code to state whether the client or the server must change
+Transform a list of nested JSON records into flat rows ready for analysis
+Identify the usage limits, attribution rules and data-reuse terms in an API's terms of service
+Validate a proposed use of data against the purpose it was collected for",Industry Mentor
+Module 1: Foundations of Data,8,8.1,"Snack App: Ingest, Clean, Explore","Module 1 wrap-up: every step so far joined into one small app; ingest (7.2 API or CSV) -> clean (5.2) -> EDA (7.1) -> share on GitHub (pre-recorded pre-work); turning notebook steps into a rerunnable script; installing Streamlit and pinning packages in requirements.txt; loading the API key from a .env file; handling a failed API pull with try/except from 3.1; optional Streamlit page with a filter and charts; closes Module 1: we have explained what happened, next we predict what will happen","CLI-034
+ETL-042
+CLI-027
+API-022
+VIZ-031
+CLI-020","Convert a working notebook into a runnable Python script
+Refactor an ad-hoc notebook cleaning sequence into a rerunnable ordered pipeline
+Configure a .env file and load credentials from it at run time
+Catch a failed request so one bad response does not stop the whole data pull
+Build a Streamlit page that filters a cleaned dataset and displays its exploratory charts
+Write a requirements.txt pinning the versions a project depends on",Industry Mentor
+Evaluation,,,Module - 1 Evaluation,,,,
+Mini Project,,,CryptoWatch - Real-Time Market Sentiment Tracker,,,,
+Mini Project,,,FoodSafety Insights - Restaurant Inspection Intelligence,,,,
+Mini Project,,,TrendPulse - What's Actually Trending Right Now,,,,
+Module 2: Classical ML,8,8.2,"ML Workflow, Framing & Baselines","Opens Module 2 on the same orders data: from describing what happened to predicting what happens next; ML workflow & habits; problem framing: target, features, unit of analysis; regression vs classification targets; the scikit-learn fit/transform/predict interface, shown with one transformer (SimpleImputer) and one estimator; train/validation/test split with a fixed seed; baselines a model must beat","MLFOUND-005
+MLFOUND-006
+MLFOUND-003
+MLFOUND-010
+MLFOUND-013
+MLFOUND-026","Describe the stages of an ML workflow from problem framing to deployment
+Convert a business question into an ML task naming target, features and unit of analysis
+Classify a supervised problem as regression or classification from its target variable
+Apply the fit, predict and transform interface of a scikit-learn estimator
+Construct a three-way train, validation and test split for model selection
+Construct a baseline predictor that a trained model must beat",Industry Mentor
+Module 2: Classical ML,9,9.1,Data Preparation for ML,"Builds on 8.2: the baseline needs clean, numeric inputs; data prep: missing values (why values go missing: at random or systematically, then drop or impute for modelling); duplicates; categorical encoding (one-hot); scaling (standardisation); leakage guard: fit preprocessing on the training split only; chaining steps in a scikit-learn Pipeline","ETL-013
+ETL-018
+FEAT-002
+FEAT-010
+MLFOUND-020
+MLFOUND-028","Select between dropping and imputing missing values, justifying by missingness share and mechanism
+Remove duplicate records keyed on a subset of columns, keeping a stated record
+Encode a nominal categorical column using one-hot encoding
+Apply standardisation to numeric features
+Explain how fitting a scaler before splitting leaks test information into training
+Build a scikit-learn Pipeline chaining preprocessing steps to an estimator",Industry Mentor
+Module 2: Classical ML,9,9.2,Feature Engineering & Class Imbalance,"Builds on 9.1: with clean inputs in place, raw columns still hide patterns, and cancelled orders are rare; simple feature engineering from dates: day-of-week, month, hour; count features: recency, order frequency and total spend per customer; ratio features; spotting a feature that leaks the target; count and frequency encoding for many-valued columns; class imbalance basics: resampling the rare cancelled orders now, and class weights as the model-side option practised in 10.2","FEAT-016
+FEAT-018
+FEAT-015
+FEAT-034
+MLFOUND-019
+FEAT-006","Extract calendar features such as day-of-week and month from a datetime column
+Aggregate transaction rows into per-customer recency, frequency and monetary features
+Construct a ratio or difference feature from two existing columns
+Diagnose a target-leaking engineered feature by tracing how it was constructed
+Apply class weighting or resampling to a training set with a rare positive class
+Encode a high-cardinality categorical column using frequency or target encoding",Industry Mentor
+Module 2: Classical ML,10,10.1,"Linear Regression, Metrics & Regularization","Builds on 9.2: first real model on the engineered features, predicting delivery time in minutes; Linear Regression; reading coefficients; metrics MAE/RMSE/R2 (R-squared) compared with the 8.2 baseline; quick error analysis with residual plots; overfitting vs underfitting; regularization: Ridge and Lasso as the fix for overfitting","REG-004
+MLFOUND-022
+MLEVAL-001
+MLEVAL-004
+REG-009
+REG-017","Train a multiple linear regression model on several numeric features
+Compare overfitting and underfitting by their training and validation error signatures
+Compute MAE and RMSE for a set of regression predictions
+Interpret an R-squared value against a mean-predicting baseline
+Analyze a residual plot for non-linearity and non-constant variance
+Compare Ridge and Lasso by their effect on coefficient magnitudes",Industry Mentor
+Module 2: Classical ML,10,10.2,Logistic Regression & Classification Metrics,"Builds on 10.1: same workflow, but the target is now yes/no (will this order be cancelled?); Logistic Regression and predicted probabilities; confusion matrix; metrics accuracy, precision/recall, F1; ROC curve and ROC-AUC; threshold tuning; refitting with class_weight, named in 9.2","CLF-005
+MLEVAL-007
+MLEVAL-009
+MLEVAL-016
+MLEVAL-019
+MLEVAL-011","Train a logistic regression model for a binary target
+Construct a confusion matrix from predicted and actual labels
+Compute precision, recall and F1 from a confusion matrix
+Compute an ROC curve and its AUC from predicted probabilities
+Convert predicted probabilities into class labels at a chosen threshold
+Explain why accuracy misleads on a heavily imbalanced dataset",Industry Mentor
+Module 2: Classical ML,10,10.3,"Masterclass: The Mathematics Behind Learning: Lines, Curves & Errors","Linear Equations & The Equation of a Line:  y = mx + c. What the slope and intercept represent in real data. How Linear Regression is literally finding the best line through points. Residuals - the gap between the line and the point - as ""error.""
+
+Calculus Intuition , Rate of Change & Minimisation : What a derivative means conceptually (how fast is something changing?). Why do we want to minimise errors? The idea of a minimum of a curve - where the slope becomes zero. Gradient descent as ""walking downhill""  no formulas required, only the picture.","MATHML-002
+MATHML-003
+MATHML-026
+MATHML-053
+MATHML-038","Construct the equation of a straight line from two given points
+Explain least squares as choosing the line that minimises summed squared residuals
+Interpret a derivative as the slope of the tangent at a point
+Describe gradient descent as repeated steps against the slope until the loss stops falling
+Construct the squared-error loss as a function of the model parameters",Professor
+Module 2: Classical ML,11,11.1,Decision Trees & Random Forests,Builds on 10.1-10.2: error analysis shows patterns that straight lines miss; supervised learning beyond linear models: decision trees as if-then splits; tree depth and overfitting (revisiting 10.1); Trees & Random Forests: bagging many trees; feature importance,"ENSEMBLE-004
+ENSEMBLE-007
+ENSEMBLE-009
+MLFOUND-023
+ENSEMBLE-016
+MLEVAL-033","Train a decision tree classifier on a labelled tabular dataset
+Interpret a plotted decision tree as a set of if-then rules
+Configure depth and leaf-size constraints to limit the complexity of a decision tree
+Diagnose overfitting from the gap between training and validation scores
+Train a random forest classifier on a tabular dataset
+Extract ranked feature importances from a fitted tree ensemble",Industry Mentor
+Module 2: Classical ML,11,11.2,Cross-Validation & Final Model Selection,"Builds on 11.1: several candidate classifiers now exist for the cancellation target (logistic, tree, forest), so compare them fairly on one metric; cross-validation (k-fold); scoring models on identical folds; reading fold-score spread; metric tables; model comparison & selection: choose by metric + simplicity; saving the chosen model; explaining the chosen model's predictions and feature importances to a non-technical business audience","MLFOUND-015
+MLEVAL-022
+MLEVAL-024
+MLEVAL-042
+MLOPS-002
+STORY-009","Apply k-fold cross-validation to obtain a stable estimate of model performance
+Compute cross-validated scores for two candidate models under an identical fold scheme
+Interpret the spread of cross-validation fold scores as evidence of score stability
+Select a final model from a metric table, justifying by score margin against model complexity
+Write a fitted model to disk as a serialised artifact
+Rewrite a technical finding in language a non-specialist reader can act on",Industry Mentor
+Module 2: Classical ML,11,11.3,Masterclass Probability & Counting :The Mathematics of Uncertainty,"Probability Fundamentals :  Sample space, events, P(A), complement rule, addition rule P(A∪B), multiplication rule for independent events. Classical probability with coins, dice, cards. Conditional probability P(A|B)  how knowing one thing changes the probability of another.
+
+Bayes' Theorem from First Principles : Derived step by step from conditional probability. One concrete real-world example worked out by hand (disease test or spam). The idea that prior belief + new evidence = updated belief. Stated as a formula, not a model.","STAT-019
+STAT-020
+STAT-025
+STAT-040
+STAT-026
+STAT-024","Compute the probability of an event and of its complement
+Apply the addition rule to mutually exclusive and to overlapping events
+Compute a conditional probability from a two-way table
+Explain how Bayes theorem follows from the definition of conditional probability
+Apply Bayes' theorem to update a probability given a test result
+Compute joint and marginal probabilities from a two-way table",Professor
+Module 2: Classical ML,12,12.1,Customer Clustering & Dimensionality Reduction,"Builds on 11.2: not every question has a label to predict, e.g. what kinds of customers do we have?; Unsupervised Learning vs supervised, with a one-line look at reinforcement learning; k-means clustering on the 9.2 per-customer features, scaled as in 9.1; choosing k with the elbow; profiling customer segments; PCA to reduce and visualise features","MLFOUND-002
+UNSUP-003
+UNSUP-004
+UNSUP-010
+UNSUP-026
+UNSUP-027","Classify a described problem as supervised, unsupervised or reinforcement learning
+Cluster a scaled numeric dataset into k groups using k-means
+Select k where the marginal drop in inertia falls below a stated fraction of the previous drop
+Interpret cluster centroids as segment profiles described in business terms
+Apply PCA to reduce a feature set to a stated number of components
+Select the number of principal components, justifying by cumulative explained variance",Industry Mentor
+Module 2: Classical ML,12,12.2,Time Series Forecasting Basics,"Builds on 12.1 and the 9.2 date features: daily order counts are ordered in time, so a random split breaks; Time Series (lite); trend, seasonality, cycle and noise; time-ordered train/test split; lag and rolling-window features; seasonal-naive baseline forecast; a lag-feature linear regression forecast (reusing 10.1) checked against that baseline; closes Module 2: models predict numbers and labels, next LLMs read, write and act","TS-001
+TS-002
+TS-027
+FEAT-023
+TS-022
+TS-030","Describe a time series as trend, seasonality, cycle and noise components
+Explain why time series data breaks the independence assumption behind a random train/test split
+Split a time series into train and test sets preserving time order
+Construct lag and rolling-window features from a time-indexed column
+Build a seasonal-naive baseline forecast
+Evaluate a forecast against a seasonal-naive baseline on held-out periods",Industry Mentor
+Evaluation,,,Module - 2 Evaluation,,,,
+Mini Project,,,ChurnGuard - Predicting Customer Exit Before It Happens,,,,
+Mini Project,,,LoanLens - Automated Credit Risk Assessment,,,,
+Mini Project,,,RentRight - Predicting Fair Apartment Prices,,,,
+Module 3: GenAI & Agents,13,13.1,LLM Fundamentals & First API Call,"Opens Module 3: models so far predicted numbers and labels, LLMs work with language, starting with an assistant for the same food-delivery business; LLM fundamentals; tokens; context windows; temperature/top-p; first API calls from Python to OpenAI (ChatGPT) and Anthropic (Claude) with the key loaded from .env as in 8.1; cost/latency basics","LLM-003
+LLM-006
+LLM-010
+LLM-015
+LLM-021
+LLM-022","Describe how a tokenizer splits text into subword tokens
+Explain what a context window limits and what counts against it
+Configure temperature, top-p and max tokens for a stated task
+Call a hosted LLM API, extracting the generated text from the response envelope
+Compute the cost of a single API call from input and output token prices
+Select a model for a stated task, justifying by capability, cost and latency",Industry Mentor
+Module 3: GenAI & Agents,13,13.2,Prompting Patterns & Prompt Evaluation,"Builds on 13.1: raw calls give inconsistent answers, so shape them with prompting patterns and measure the fix; role and system prompts; few-shot examples; chain-of-thought (CoT); a tiny prompt-eval set with expected outputs; pass rate as a quality baseline (reused in 15.1 and 16.2)","PROMPT-006
+PROMPT-008
+PROMPT-004
+PROMPT-009
+LLMEVAL-002
+LLMEVAL-031","Write a system prompt that fixes the assistant's role, scope and constraints
+Apply role prompting to set the vocabulary and depth of an answer
+Construct a few-shot prompt with worked input-output examples
+Write a chain-of-thought prompt that requests reasoning before the final answer
+Construct a fixed eval set of inputs and expected outputs for a stated LLM task
+Compute the pass rate of an eval suite and record it as a quality baseline",Industry Mentor
+Module 3: GenAI & Agents,14,14.1,Tool Calling & Structured Outputs,"Builds on 13.2: good text isn't enough, the model must call our code (e.g. look up an order) and return data we can trust; function/tool calling round trip; tool schemas; structured outputs (JSON/validation) with Pydantic; validate-and-repair for bad JSON; retries/backoff on rate-limited LLM calls","LLM-025
+LLM-026
+LLM-023
+LLM-024
+LLMEVAL-020
+API-021","Construct a tool-calling schema describing one external function and its parameters
+Trace a single tool-calling round trip from model request to returned result
+Construct a JSON schema describing the fields a model response must return
+Configure an API call to return output conforming to a supplied schema
+Implement a validation and repair loop for malformed structured outputs
+Implement retry with exponential backoff and jitter for a request rejected by a rate limit",Industry Mentor
+Module 3: GenAI & Agents,14,14.2,Agents 101: CSV Analyst Build,"Builds on 14.1: put validated tool calls inside a loop that decides the next step; Agents 101 (basics): what makes an agent; single agent with 1-2 tools in a tool registry, described by JSON schemas; the ReAct loop; idempotent tool design so the loop's retries are safe; short-term memory: the message history the loop carries between steps; hard stop on iterations; mini-build: CSV Analyst over the orders data (FAQ Helpdesk as the alternative)","AGENT-001
+AGENT-012
+AGENT-013
+AGENT-014
+AGENT-042
+AGENT-015","Describe what makes a system an agent rather than a single LLM call
+Build a tool registry exposing several Python functions to an agent
+Implement a ReAct loop that calls a tool and feeds the observation back
+Implement an agent that chains two dependent tool calls to answer one question
+Implement an idempotent tool that returns the same result when an agent repeats a call
+Configure a stopping rule limiting an agent's iterations and total tool calls",Industry Mentor
+Module 3: GenAI & Agents,14,14.3,Masterclass: Vectors & Linear Algebra  The Mathematics of Space and Direction,"Vectors from Scratch : What is a scalar vs a vector. Representing vectors as arrows and as coordinate lists. Vector addition, subtraction, scalar multiplication geometrically and algebraically. Magnitude using the Pythagorean theorem. Unit vectors.
+
+Dot Product & Angle Between Vectors  : Formula: a·b = |a||b|cos(θ). Computing it by hand. What the result tells you  positive means the same direction, zero means perpendicular, negative means opposite. Cosine of an angle derived from the dot product formula step by step.","MATHML-005
+MATHML-006
+MATHML-008
+MATHML-010","Compute vector addition, subtraction and scalar multiplication
+Compute the magnitude of a vector using the L2 norm
+Compute the dot product of two vectors
+Compute the angle between two vectors using the cosine formula",Professor
+Module 3: GenAI & Agents,15,15.1,Shipping Sprint: Build & Deploy,"Builds on 14.2: the CSV Analyst agent runs in a notebook, which nobody else can use, so wrap it as a service and put it somewhere real; a chat endpoint that takes a validated request and returns the agent's reply; a request schema that rejects a malformed call before it reaches the agent; provider keys as environment secrets rather than code; deploying to a hosting platform and serving over HTTP; the classic works-on-my-machine failure, and reading a deployment log to name the cause, usually a missing environment variable or a version mismatch; then a fixed prompt set run against the live URL to record how the deployed service actually behaves","LLMOPS-036
+MLOPS-008
+LLMOPS-034
+LLMOPS-002
+MLOPS-022
+LLMEVAL-036","Build a FastAPI chat endpoint that passes a validated request to an agent and returns its reply
+Construct a Pydantic request schema that rejects a malformed prediction request
+Configure provider credentials as environment secrets in a deployed service
+Deploy an LLM-backed endpoint that serves requests over HTTP
+Diagnose a service that runs locally but fails in the hosted environment
+Test a deployed endpoint against a fixed prompt set and record its pass rate",Industry Mentor
+Module 3: GenAI & Agents,15,15.2,RAG 101: Embeddings & Chunking,"Builds on 15.1: the deployed assistant knows the orders data, but customers also ask about refund and restaurant policies that live only in documents; why retrieval; RAG 101; embeddings; cosine similarity and semantic search; chunking documents with overlap; storing chunks in a vector store (Chroma)","RAG-001
+EMBED-005
+EMBED-010
+EMBED-014
+RAG-006
+EMBED-019","Explain why a language model needs retrieval to answer from private or recent documents
+Encode a list of text documents into embedding vectors using a hosted model
+Compute the cosine similarity between two embedding vectors
+Implement brute-force semantic search that ranks a document set against a query
+Chunk a document into fixed-size passages with overlap between neighbours
+Write embedded documents into a vector store together with their ids and metadata",Industry Mentor
+Module 3: GenAI & Agents,16,16.1,"Retrievers, RAG Pipeline & Evaluation",Builds on 15.2: stored chunks only help if the right ones come back and the answer is checked; LangChain intro: installing it and wrapping the 15.2 Chroma store as a retriever; retrievers: top-k from the vector store; grounded prompts that answer only from context; an end-to-end RAG pipeline; RAG eval: answer correctness & context recall,"EMBED-020
+RAG-011
+PROMPT-024
+RAG-032
+LLMEVAL-016
+LLMEVAL-037","Query a vector store for the top-k nearest neighbours of a query vector
+Configure a retriever's top-k and score threshold for a stated context budget
+Write a prompt that instructs the model to answer only from supplied reference text
+Build a working retrieval-augmented pipeline over a provided document corpus
+Compute retrieval recall at k for a RAG pipeline against a labelled question set
+Compute answer correctness for RAG outputs against reference answers on a labelled question set",Industry Mentor
+Module 3: GenAI & Agents,16,16.2,"Agents, RAG & Orchestration","Module 3 wrap-up, building on 16.1: the agent from 14.2 and the retriever from 16.1 become one system, and its steps are made explicit as a graph; a retriever the agent calls only when a question needs the corpus; an agent graph of nodes and edges; a conditional route that sends a run down a different branch; a retry and fallback path when a tool call fails; then designing an agent for a stated workflow, naming its tools, memory and stopping rule","AGENT-043
+AGENT-016
+AGENT-020
+AGENT-021
+AGENT-026
+AGENT-039","Implement a retriever tool that an agent calls when a question needs the document corpus
+Configure the tool set and role assigned to an agent in a framework
+Construct an agent graph with nodes and edges in LangGraph
+Implement a conditional route that sends a run down a different branch
+Implement a retry and fallback path for a tool call that fails
+Design an agent for a stated workflow naming its tools, memory and stopping rule",Industry Mentor
+Evaluation,,,Module - 3 Evaluation,,,,
+Mini Project,,,DataGenie - Natural Language Data Analyst,,,,
+Mini Project,,,SupportAI - Intelligent FAQ Helpdesk Agent,,,,
+Mini Project,,,ResearchPilot - Automated Market Research Agent,,,,
+Module 4: Capstone,17,,Capstone Week,,,,
+Module 4: Capstone,18,,Capstone Week,,,,
